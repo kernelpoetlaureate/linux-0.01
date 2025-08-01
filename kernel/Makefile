@@ -7,41 +7,41 @@
 #
 
 AR	=gar
-AS	=gas
+AS	=as86
 LD	=gld
 LDFLAGS	=-s -x
 CC	=gcc
 CFLAGS	=-Wall -O -fstrength-reduce -fomit-frame-pointer -fcombine-regs \
-	-finline-functions -mstring-insns -nostdinc -I../include
+  -finline-functions -mstring-insns -nostdinc -I../include
 CPP	=gcc -E -nostdinc -I../include
 
 .c.s:
-	$(CC) $(CFLAGS) \
-	-S -o $*.s $<
+  $(CC) $(CFLAGS) \
+  -S -o $*.s $<
 .s.o:
-	$(AS) -c -o $*.o $<
+  $(AS) -c -o $*.o $<
 .c.o:
-	$(CC) $(CFLAGS) \
-	-c -o $*.o $<
+  $(CC) $(CFLAGS) \
+  -c -o $*.o $<
 
 OBJS  = sched.o system_call.o traps.o asm.o fork.o \
-	panic.o printk.o vsprintf.o tty_io.o console.o \
-	keyboard.o rs_io.o hd.o sys.o exit.o serial.o \
-	mktime.o
+  panic.o printk.o vsprintf.o tty_io.o console.o \
+  keyboard.o rs_io.o hd.o sys.o exit.o serial.o \
+  mktime.o
 
 kernel.o: $(OBJS)
-	$(LD) -r -o kernel.o $(OBJS)
-	sync
+  $(LD) -r -o kernel.o $(OBJS)
+  sync
 
 clean:
-	rm -f core *.o *.a tmp_make
-	for i in *.c;do rm -f `basename $$i .c`.s;done
+  rm -f core *.o *.a tmp_make
+  for i in *.c;do rm -f `basename $$i .c`.s;done
 
 dep:
-	sed '/\#\#\# Dependencies/q' < Makefile > tmp_make
-	(for i in *.c;do echo -n `echo $$i | sed 's,\.c,\.s,'`" "; \
-		$(CPP) -M $$i;done) >> tmp_make
-	cp tmp_make Makefile
+  sed '/\#\#\# Dependencies/q' < Makefile > tmp_make
+  (for i in *.c;do echo -n `echo $$i | sed 's,\.c,\.s,'`" "; \
+    $(CPP) -M $$i;done) >> tmp_make
+  cp tmp_make Makefile
 
 ### Dependencies:
 console.s console.o : console.c ../include/linux/sched.h ../include/linux/head.h \

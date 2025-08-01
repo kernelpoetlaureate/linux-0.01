@@ -23,47 +23,25 @@ startup_32:
 	mov %ax,%fs
 	mov %ax,%gs
 	lss _stack_start,%esp
-	xorl %eax,%eax
-1:	incl %eax		# check that A20 really IS enabled
-	movl %eax,0x000000
-	cmpl %eax,0x100000
-	je 1b
-	movl %cr0,%eax		# check math chip
-	andl $0x80000011,%eax	# Save PG,ET,PE
-	testl $0x10,%eax
-	jne 1f			# ET is set - 387 is present
-	orl $4,%eax		# else set emulate bit
-1:	movl %eax,%cr0
-	jmp after_page_tables
+align 4
+dw 0
+idt_descr:
+	dw 256*8-1           ; idt contains 256 entries
+	dd _idt
+align 4
+dw 0
 
-/*
- *  setup_idt
- *
- *  sets up a idt with 256 entries pointing to
- *  ignore_int, interrupt gates. It then loads
- *  idt. Everything that wants to install itself
- *  in the idt-table may do so themselves. Interrupts
- *  are enabled elsewhere, when we can be relatively
- *  sure everything is ok. This routine will be over-
- *  written by the page tables.
- */
-setup_idt:
-	lea ignore_int,%edx
-	movl $0x00080000,%eax
-	movw %dx,%ax		/* selector = 0x0008 = cs */
-	movw $0x8E00,%dx	/* interrupt gate - dpl=0, present */
+	dw 256*8-1           ; so does gdt (not that that's any
+	dd _gdt               ; magic number, but it works for me :^)
 
-	lea _idt,%edi
-	mov $256,%ecx
-rp_sidt:
-	movl %eax,(%edi)
-	movl %edx,4(%edi)
-	addl $8,%edi
-	dec %ecx
-	jne rp_sidt
-	lidt idt_descr
-	ret
+align 8
+_idt:  times 256 dq 0           ; idt is uninitialized
 
+_gdt:  dq 0x0000000000000000        ; NULL descriptor
+	   dq 0x00c09a00000007ff        ; 8Mb
+	   dq 0x00c09200000007ff        ; 8Mb
+	   dq 0x0000000000000000        ; TEMPORARY - don't use
+	   times 252 dq 0                   ; space for LDT's and TSS's etc
 /*
  *  setup_gdt
  *

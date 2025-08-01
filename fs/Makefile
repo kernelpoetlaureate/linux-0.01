@@ -1,35 +1,35 @@
 AR	=gar
-AS	=gas
+AS	=as86
 CC	=gcc
 LD	=gld
 CFLAGS	=-Wall -O -fstrength-reduce -fcombine-regs -fomit-frame-pointer \
-	-mstring-insns -nostdinc -I../include
+  -mstring-insns -nostdinc -I../include
 CPP	=gcc -E -nostdinc -I../include
 
 .c.s:
-	$(CC) $(CFLAGS) \
-	-S -o $*.s $<
+  $(CC) $(CFLAGS) \
+  -S -o $*.s $<
 .c.o:
-	$(CC) $(CFLAGS) \
-	-c -o $*.o $<
+  $(CC) $(CFLAGS) \
+  -c -o $*.o $<
 .s.o:
-	$(AS) -o $*.o $<
+  $(AS) -o $*.o $<
 
 OBJS=	open.o read_write.o inode.o file_table.o buffer.o super.o \
-	block_dev.o char_dev.o file_dev.o stat.o exec.o pipe.o namei.o \
-	bitmap.o fcntl.o ioctl.o tty_ioctl.o truncate.o
+  block_dev.o char_dev.o file_dev.o stat.o exec.o pipe.o namei.o \
+  bitmap.o fcntl.o ioctl.o tty_ioctl.o truncate.o
 
 fs.o: $(OBJS)
-	$(LD) -r -o fs.o $(OBJS)
+  $(LD) -r -o fs.o $(OBJS)
 
 clean:
-	rm -f core *.o *.a tmp_make
-	for i in *.c;do rm -f `basename $$i .c`.s;done
+  rm -f core *.o *.a tmp_make
+  for i in *.c;do rm -f `basename $$i .c`.s;done
 
 dep:
-	sed '/\#\#\# Dependencies/q' < Makefile > tmp_make
-	(for i in *.c;do $(CPP) -M $$i;done) >> tmp_make
-	cp tmp_make Makefile
+  sed '/\#\#\# Dependencies/q' < Makefile > tmp_make
+  (for i in *.c;do $(CPP) -M $$i;done) >> tmp_make
+  cp tmp_make Makefile
 
 ### Dependencies:
 bitmap.o : bitmap.c ../include/string.h ../include/linux/sched.h \

@@ -4,11 +4,11 @@
 # remove them from the CFLAGS defines.
 #
 
-AS86	=as -0 -a
+AS86	=as86
 CC86	=cc -0
 LD86	=ld -0
 
-AS	=gas
+AS	=as86
 LD	=gld
 LDFLAGS	=-s -x -M
 CC	=gcc
@@ -21,8 +21,10 @@ LIBS	=lib/lib.a
 .c.s:
 	$(CC) $(CFLAGS) \
 	-nostdinc -Iinclude -S -o $*.s $<
-.s.o:
-	$(AS) -c -o $*.o $<
+
+# Use nasm for boot/head.s (Intel syntax)
+boot/head.o: boot/head.s
+	nasm -f elf -o boot/head.o boot/head.s
 .c.o:
 	$(CC) $(CFLAGS) \
 	-nostdinc -Iinclude -c -o $*.o $<
@@ -86,6 +88,15 @@ dep:
 	(cd fs; make dep)
 	(cd kernel; make dep)
 	(cd mm; make dep)
+
+# Create a 1.44MB bootable floppy image from Image
+floppy.img: Image
+	cp Image floppy.img
+	dd if=/dev/zero of=floppy.img bs=1 count=0 seek=1474560
+
+# Run QEMU with the floppy image
+run-qemu: floppy.img
+	qemu-system-i386 -fda floppy.img -boot a -serial stdio
 
 ### Dependencies:
 init/main.o : init/main.c include/unistd.h include/sys/stat.h \
