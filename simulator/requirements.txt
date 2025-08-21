@@ -1,0 +1,17 @@
+# Linux 0.01 Memory Management Simulator
+# Requirements for Python environment
+
+# Core dependencies
+# No external dependencies required - uses only Python standard library
+
+# Optional dependencies for enhanced features
+matplotlib>=3.5.0     # For advanced visualization (GUI version)
+numpy>=1.21.0        # For numerical operations (GUI version)
+tkinter              # For GUI interface (usually comes with Python)
+
+# Development dependencies
+pytest>=6.0.0        # For unit testing
+pytest-cov>=2.0.0    # For coverage reports
+mypy>=0.910          # For type checking
+black>=21.0.0        # For code formatting
+flake8>=3.9.0        # For linting
