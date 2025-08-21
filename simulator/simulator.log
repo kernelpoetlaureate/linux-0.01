@@ -1,0 +1,135 @@
+2025-08-21 07:43:19,486 - physical_memory - INFO - Physical memory initialized: 1792 pages (7168KB)
+2025-08-21 07:43:19,487 - virtual_memory - INFO - Virtual memory manager initialized
+2025-08-21 07:43:49,230 - virtual_memory - ERROR - copy_page_tables: destination already exists
+2025-08-21 07:43:49,231 - process_manager - ERROR - Failed to copy page tables
+2025-08-21 07:43:49,269 - physical_memory - INFO - Physical memory initialized: 1792 pages (7168KB)
+2025-08-21 07:43:49,269 - virtual_memory - INFO - Virtual memory manager initialized
+2025-08-21 07:43:49,269 - process_manager - INFO - Initialized task 0 (init)
+2025-08-21 07:43:49,269 - process_manager - INFO - Process manager initialized
+2025-08-21 07:43:49,269 - memory_simulator - INFO - Linux 0.01 Memory Simulator initialized
+2025-08-21 07:43:49,269 - memory_simulator - INFO - Running basic memory management demo
+2025-08-21 07:43:49,269 - physical_memory - INFO - Allocated page 1791 at address 0x007ff000
+2025-08-21 07:43:49,269 - physical_memory - INFO - Allocated page 1790 at address 0x007fe000
+2025-08-21 07:43:49,269 - physical_memory - INFO - Allocated page 1789 at address 0x007fd000
+2025-08-21 07:43:49,269 - physical_memory - INFO - Allocated page 1788 at address 0x007fc000
+2025-08-21 07:43:49,269 - physical_memory - INFO - Allocated page 1787 at address 0x007fb000
+2025-08-21 07:43:49,269 - physical_memory - INFO - Allocated page 1786 at address 0x007fa000
+2025-08-21 07:43:49,269 - virtual_memory - INFO - Copied page tables from 0x00000000 to 0x00000000, size 4194304
+2025-08-21 07:43:49,269 - process_manager - INFO - Created child process 1 from parent 0
+2025-08-21 07:43:49,269 - physical_memory - INFO - Allocated page 1785 at address 0x007f9000
+2025-08-21 07:43:49,269 - physical_memory - INFO - Allocated page 1784 at address 0x007f8000
+2025-08-21 07:43:49,270 - virtual_memory - INFO - Mapped physical 0x007f9000 to virtual 0x00100000
+2025-08-21 07:43:49,270 - physical_memory - INFO - Allocated page 1783 at address 0x007f7000
+2025-08-21 07:43:49,270 - virtual_memory - INFO - Mapped physical 0x007f7000 to virtual 0x00101000
+2025-08-21 07:43:49,270 - process_manager - INFO - Allocated 8192 bytes at 0x00100000 for process 1
+2025-08-21 07:43:49,270 - physical_memory - INFO - Allocated page 1782 at address 0x007f6000
+2025-08-21 07:43:49,270 - physical_memory - INFO - Allocated page 1781 at address 0x007f5000
+2025-08-21 07:43:49,270 - virtual_memory - INFO - Mapped physical 0x007f6000 to virtual 0x00400000
+2025-08-21 07:43:49,270 - virtual_memory - INFO - Allocated new page 0x007f6000 for fault at 0x00400000
+2025-08-21 07:43:49,270 - physical_memory - INFO - Allocated page 1780 at address 0x007f4000
+2025-08-21 07:43:49,270 - virtual_memory - INFO - Mapped physical 0x007f4000 to virtual 0x00401000
+2025-08-21 07:43:49,270 - virtual_memory - INFO - Allocated new page 0x007f4000 for fault at 0x00401000
+2025-08-21 07:43:49,270 - physical_memory - INFO - Freed page 1791 at address 0x007ff000
+2025-08-21 07:43:49,270 - physical_memory - INFO - Freed page 1790 at address 0x007fe000
+2025-08-21 07:43:49,271 - memory_simulator - INFO - Basic demo completed
+2025-08-21 07:43:49,271 - physical_memory - INFO - Memory stats: 1782 pages free (of 1792)
+2025-08-21 07:43:58,019 - physical_memory - INFO - Physical memory initialized: 1792 pages (7168KB)
+2025-08-21 07:43:58,019 - virtual_memory - INFO - Virtual memory manager initialized
+2025-08-21 07:43:58,020 - process_manager - INFO - Initialized task 0 (init)
+2025-08-21 07:43:58,020 - process_manager - INFO - Process manager initialized
+2025-08-21 07:43:58,020 - memory_simulator - INFO - Linux 0.01 Memory Simulator initialized
+2025-08-21 07:43:58,021 - physical_memory - INFO - Memory stats: 1792 pages free (of 1792)
+2025-08-21 07:43:58,022 - physical_memory - INFO - Allocated page 1791 at address 0x007ff000
+2025-08-21 07:43:58,022 - physical_memory - INFO - Allocated page 1790 at address 0x007fe000
+2025-08-21 07:43:58,022 - physical_memory - INFO - Allocated page 1789 at address 0x007fd000
+2025-08-21 07:43:58,022 - virtual_memory - INFO - Copied page tables from 0x00000000 to 0x00000000, size 4194304
+2025-08-21 07:43:58,022 - process_manager - INFO - Created child process 1 from parent 0
+2025-08-21 07:43:58,022 - physical_memory - INFO - Memory stats: 1789 pages free (of 1792)
+2025-08-21 07:45:41,504 - physical_memory - INFO - Physical memory initialized: 1792 pages (7168KB)
+2025-08-21 07:45:41,504 - virtual_memory - INFO - Virtual memory manager initialized
+2025-08-21 07:45:41,504 - process_manager - INFO - Initialized task 0 (init)
+2025-08-21 07:45:41,504 - process_manager - INFO - Process manager initialized
+2025-08-21 07:45:41,504 - memory_simulator - INFO - Linux 0.01 Memory Simulator initialized
+2025-08-21 07:45:41,504 - physical_memory - INFO - Memory stats: 1792 pages free (of 1792)
+2025-08-21 07:45:41,504 - physical_memory - INFO - Allocated page 1791 at address 0x007ff000
+2025-08-21 07:45:41,505 - physical_memory - INFO - Allocated page 1790 at address 0x007fe000
+2025-08-21 07:45:41,505 - physical_memory - INFO - Allocated page 1789 at address 0x007fd000
+2025-08-21 07:45:41,505 - physical_memory - INFO - Allocated page 1788 at address 0x007fc000
+2025-08-21 07:45:41,505 - physical_memory - INFO - Allocated page 1787 at address 0x007fb000
+2025-08-21 07:45:41,505 - physical_memory - INFO - Allocated page 1786 at address 0x007fa000
+2025-08-21 07:45:41,505 - virtual_memory - INFO - Mapped physical 0x007ff000 to virtual 0x00400000
+2025-08-21 07:45:41,505 - virtual_memory - INFO - Mapped physical 0x007fe000 to virtual 0x00401000
+2025-08-21 07:45:41,505 - virtual_memory - INFO - Mapped physical 0x007fd000 to virtual 0x00402000
+2025-08-21 07:45:41,505 - virtual_memory - INFO - Mapped physical 0x007fc000 to virtual 0x00403000
+2025-08-21 07:45:41,506 - virtual_memory - INFO - Mapped physical 0x007fb000 to virtual 0x00404000
+2025-08-21 07:45:41,506 - physical_memory - INFO - Memory stats: 1786 pages free (of 1792)
+2025-08-21 07:45:42,507 - physical_memory - INFO - Physical memory initialized: 1792 pages (7168KB)
+2025-08-21 07:45:42,507 - virtual_memory - INFO - Virtual memory manager initialized
+2025-08-21 07:45:42,507 - process_manager - INFO - Initialized task 0 (init)
+2025-08-21 07:45:42,507 - process_manager - INFO - Process manager initialized
+2025-08-21 07:45:42,507 - memory_simulator - INFO - Linux 0.01 Memory Simulator initialized
+2025-08-21 07:45:42,507 - physical_memory - INFO - Allocated page 1791 at address 0x007ff000
+2025-08-21 07:45:42,507 - virtual_memory - INFO - Copied page tables from 0x00000000 to 0x00000000, size 4194304
+2025-08-21 07:45:42,507 - process_manager - INFO - Created child process 1 from parent 0
+2025-08-21 07:45:42,507 - physical_memory - INFO - Allocated page 1790 at address 0x007fe000
+2025-08-21 07:45:42,507 - physical_memory - INFO - Allocated page 1789 at address 0x007fd000
+2025-08-21 07:45:42,508 - virtual_memory - INFO - Mapped physical 0x007fe000 to virtual 0x00100000
+2025-08-21 07:45:42,508 - physical_memory - INFO - Allocated page 1788 at address 0x007fc000
+2025-08-21 07:45:42,508 - virtual_memory - INFO - Mapped physical 0x007fc000 to virtual 0x00101000
+2025-08-21 07:45:42,508 - process_manager - INFO - Allocated 8192 bytes at 0x00100000 for process 1
+2025-08-21 07:45:42,508 - physical_memory - INFO - Allocated page 1787 at address 0x007fb000
+2025-08-21 07:45:42,508 - virtual_memory - ERROR - copy_page_tables: destination already exists
+2025-08-21 07:45:42,508 - process_manager - ERROR - Failed to copy page tables
+2025-08-21 07:45:42,508 - physical_memory - INFO - Freed page 1787 at address 0x007fb000
+2025-08-21 07:45:43,509 - physical_memory - INFO - Physical memory initialized: 1792 pages (7168KB)
+2025-08-21 07:45:43,509 - virtual_memory - INFO - Virtual memory manager initialized
+2025-08-21 07:45:43,509 - process_manager - INFO - Initialized task 0 (init)
+2025-08-21 07:45:43,509 - process_manager - INFO - Process manager initialized
+2025-08-21 07:45:43,509 - memory_simulator - INFO - Linux 0.01 Memory Simulator initialized
+2025-08-21 07:45:43,509 - physical_memory - INFO - Allocated page 1791 at address 0x007ff000
+2025-08-21 07:45:43,509 - virtual_memory - INFO - Copied page tables from 0x00000000 to 0x00000000, size 4194304
+2025-08-21 07:45:43,509 - process_manager - INFO - Created child process 1 from parent 0
+2025-08-21 07:45:43,509 - physical_memory - INFO - Allocated page 1790 at address 0x007fe000
+2025-08-21 07:45:43,509 - physical_memory - INFO - Allocated page 1789 at address 0x007fd000
+2025-08-21 07:45:43,509 - virtual_memory - INFO - Mapped physical 0x007fe000 to virtual 0x00500000
+2025-08-21 07:45:43,509 - virtual_memory - INFO - Allocated new page 0x007fe000 for fault at 0x00500000
+2025-08-21 07:45:43,510 - physical_memory - INFO - Allocated page 1788 at address 0x007fc000
+2025-08-21 07:45:43,510 - physical_memory - INFO - Allocated page 1787 at address 0x007fb000
+2025-08-21 07:45:43,511 - virtual_memory - INFO - Mapped physical 0x007fc000 to virtual 0x00100000
+2025-08-21 07:45:43,511 - process_manager - INFO - Allocated 4096 bytes at 0x00100000 for process 1
+2025-08-21 07:45:43,511 - physical_memory - INFO - Allocated page 1786 at address 0x007fa000
+2025-08-21 07:45:43,511 - virtual_memory - ERROR - copy_page_tables: destination already exists
+2025-08-21 07:45:43,511 - process_manager - ERROR - Failed to copy page tables
+2025-08-21 07:45:43,511 - physical_memory - INFO - Freed page 1786 at address 0x007fa000
+2025-08-21 07:45:43,511 - physical_memory - INFO - Memory stats: 1787 pages free (of 1792)
+2025-08-21 07:45:44,512 - physical_memory - INFO - Physical memory initialized: 1792 pages (7168KB)
+2025-08-21 07:45:44,512 - virtual_memory - INFO - Virtual memory manager initialized
+2025-08-21 07:45:44,512 - process_manager - INFO - Initialized task 0 (init)
+2025-08-21 07:45:44,512 - process_manager - INFO - Process manager initialized
+2025-08-21 07:45:44,512 - memory_simulator - INFO - Linux 0.01 Memory Simulator initialized
+2025-08-21 07:45:44,512 - physical_memory - INFO - Allocated page 1791 at address 0x007ff000
+2025-08-21 07:45:44,512 - physical_memory - INFO - Allocated page 1790 at address 0x007fe000
+2025-08-21 07:45:44,512 - physical_memory - INFO - Allocated page 1789 at address 0x007fd000
+2025-08-21 07:45:44,512 - physical_memory - INFO - Allocated page 1788 at address 0x007fc000
+2025-08-21 07:45:44,512 - physical_memory - INFO - Freed page 1791 at address 0x007ff000
+2025-08-21 07:45:44,513 - physical_memory - INFO - Freed page 1789 at address 0x007fd000
+2025-08-21 07:45:44,513 - physical_memory - INFO - Memory stats: 1790 pages free (of 1792)
+2025-08-21 07:45:45,513 - physical_memory - INFO - Physical memory initialized: 1792 pages (7168KB)
+2025-08-21 07:45:45,514 - virtual_memory - INFO - Virtual memory manager initialized
+2025-08-21 07:45:45,514 - process_manager - INFO - Initialized task 0 (init)
+2025-08-21 07:45:45,514 - process_manager - INFO - Process manager initialized
+2025-08-21 07:45:45,514 - memory_simulator - INFO - Linux 0.01 Memory Simulator initialized
+2025-08-21 07:45:45,514 - physical_memory - INFO - Memory stats: 1792 pages free (of 1792)
+2025-08-21 07:45:45,514 - physical_memory - INFO - Allocated page 1791 at address 0x007ff000
+2025-08-21 07:45:45,515 - physical_memory - INFO - Memory stats: 1791 pages free (of 1792)
+2025-08-21 07:45:45,515 - physical_memory - INFO - Allocated page 1790 at address 0x007fe000
+2025-08-21 07:45:45,515 - virtual_memory - INFO - Copied page tables from 0x00000000 to 0x00000000, size 4194304
+2025-08-21 07:45:45,515 - process_manager - INFO - Created child process 1 from parent 0
+2025-08-21 07:45:45,515 - physical_memory - INFO - Memory stats: 1790 pages free (of 1792)
+2025-08-21 07:45:45,516 - physical_memory - INFO - Allocated page 1789 at address 0x007fd000
+2025-08-21 07:45:45,516 - physical_memory - INFO - Memory stats: 1789 pages free (of 1792)
+2025-08-21 07:45:45,516 - physical_memory - INFO - Allocated page 1788 at address 0x007fc000
+2025-08-21 07:45:45,516 - virtual_memory - INFO - Copied page tables from 0x00000000 to 0x00000000, size 4194304
+2025-08-21 07:45:45,516 - process_manager - INFO - Created child process 2 from parent 0
+2025-08-21 07:45:45,517 - physical_memory - INFO - Memory stats: 1788 pages free (of 1792)
+2025-08-21 07:45:45,517 - physical_memory - INFO - Allocated page 1787 at address 0x007fb000
